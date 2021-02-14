@@ -1,0 +1,24 @@
+body{
+    background-color: #ffffff;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    width: 100%; 
+    min-height: 100vh;
+    margin:0px;
+    justify-content: center;
+    align-items: center;
+    font-size:3vh;
+}
+.flexitem
+{
+    background-color: white;
+    padding:20px;
+    border:1px solid black;
+    box-shadow: 10px 10px 5px grey;
+    width:65vh;
+}
+#response
+{
+    font-size:3vh;
+}

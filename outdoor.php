@@ -40,15 +40,15 @@ session_start();
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 				<?php
-					if(isset($_SESSION["emailid"]))
+					   if(isset($_SESSION["emailid"]))
 						{
 						if(trim($_SESSION["emailid"])=="sudhirsuri43@gmail.com")
-								echo '<li><a href="admin.php">Admin</a></li>';
+								echo '<li ><a href="admin.php">Admin</a></li>';
 						}
 				?>
-					<li class="colorlib-active"><a href="index.php">Hot</a></li>
+					<li ><a href="index.php">Hot</a></li>
 					<li><a href="food.php">Food</a></li>
-					<li><a href="outdoor.php">Outdoor</a></li>
+					<li class="colorlib-active"><a href="outdoor.php">Outdoor</a></li>
 					<li ><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<?php
@@ -76,7 +76,7 @@ session_start();
 	    				<div class="row pt-md-4 blogs">
 							<?php
 							$conn=new mysqli("localhost","root","","test");
-							$query = "select  * from blogs where category='hot'";
+							$query = "select  * from blogs where category='outdoor.php'";
 							$result = $conn->query($query);
 							while($row=$result->fetch_assoc())
 							{
@@ -327,11 +327,11 @@ session_start();
 					{
 						while($row=$result->fetch_assoc())
 						{
-							echo '<li><a href="#">'.$row['category'].'<span>('.$row['count'].')</span></a></li>';	
+							echo '<li><a href="#">'.$row['category'].'<span>'.$row['count'].'</span></a></li>';	
 						}
 					} 
 				  ?>
-					<li><a href="#">Fashion <span>(6)</span></a></li>
+	                <li><a href="#">Fashion <span>(6)</span></a></li>
 	                <li><a href="#">Technology <span>(8)</span></a></li>
 	                <li><a href="#">Travel <span>(2)</span></a></li>
 	                <li><a href="#">Food <span>(2)</span></a></li>

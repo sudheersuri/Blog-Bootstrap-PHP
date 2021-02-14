@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&family=Roboto&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="../css/materialstyles.css"/>
+        <link rel="stylesheet" href="../css/styles.css"/>
+        <script src="../js/materialscript.js"></script>
+        <script src="../js/forgot.js"></script>
+    </head>
+    <body>
+        <div class="flexitem">
+                  <div id="mailaskform">
+                <form >
+                    <center> <p>Mail Secret Code</p></center>
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Emailid</label>
+                                      <input type="email" id="emailid" class="form-control" required/>
+                                  </div>
+                                <div class="links">
+                                    <br>
+                                    <a href="login.html">Login</a>
+                                </div>
+                </form>
+                <center>  
+                    <button class="btn btn-info" id="mailbtn">Send Mail</button>
+                    <div id="responseone"></div>
+                </center>
+            </div>
+            <div id="secretcodeform">
+                <form >
+                    <center> <p>Code Verification</p></center>
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Secret Code</label>
+                                      <input type="text" id="secretcode" class="form-control" required />
+                                  </div>
+                                  <div class="links">
+                                    <br>
+                                    <a href="login.html">Login</a>
+                                </div>
+                </form>
+                <center>  
+                    <button class="btn btn-info" id="verifybtn">Verify</button>
+                    <div id="responsetwo"></div>
+                </center>
+
+            </div>
+            <div id="resetpasswordform">
+                <form >
+                    <center> <p>Reset Password</p></center>
+                                <div>
+                                    <div class="form-group label-floating has-default">
+                                        <label class="control-label">Password</label>
+                                        <input type="password" id="passone" class="form-control" required/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form-group label-floating has-default">
+                                        <label class="control-label">Confirm Password</label>
+                                        <input type="password" id="passtwo" class="form-control" required/>
+                                    </div>
+                                </div>         
+                                <div class="links">
+                                    <br>
+                                    <a href="login.html">Login</a>
+                                </div>
+                </form>
+                <center>  
+                    <button class="btn btn-info" id="resetbtn">Reset Password</button>
+                    <div id="responsethree"></div>
+                </center>
+            </div>
+         </div>
+            
+</html>
