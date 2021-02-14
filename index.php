@@ -42,6 +42,8 @@
 					<li ><a href="about.html">About</a></li>
 					<li ><a href="admin.php">Admin</a></li>
 					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html">Login</a></li>
+					<li><a href="contact.html">Logout</a></li>
 				</ul>
 			</nav>
 
@@ -68,16 +70,16 @@
 								?>
 			    			    <div class="col-md-12">
 									<div class="blog-entry ftco-animate d-md-flex">
-										<a href="single.html" class="img img-2" style="background-image: url(<?php echo $row["imglocation"];?>);"></a>
+										<a href="detail.php?id=<?php echo $row["id"];?>" class="img img-2" style="background-image: url(<?php echo $row["imglocation"];?>);"></a>
 										<div class="text text-2 pl-md-4">
-				              <h3 class="mb-2"><a href="single.html"><?php echo $row["title"];?></a></h3>
+				              <h3 class="mb-2"><a href="detail.php?id=<?php echo $row["id"];?>"><?php echo $row["title"];?></a></h3>
 				              <div class="meta-wrap">
 												<p class="meta">
 				              		<span><i class="icon-calendar mr-2"></i><?php 
 									 $date=date_create($row["dateadded"]);
 									 echo date_format($date,"F m,Y"); 
 									  ?></span>
-				              		<span><a href="single.html"></a></span>
+				              		<span><a href="detail.php?id=<?php echo $row["id"];?>"></a></span>
 				              		<span><i class="icon-eye mr-2"></i><?php echo $row["viewcounter"];?></span>
 				              	</p>
 			              	</div>
