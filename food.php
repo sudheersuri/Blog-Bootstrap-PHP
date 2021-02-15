@@ -60,13 +60,7 @@ session_start();
 				</ul>
 			</nav>
 
-			<div class="colorlib-footer">
-				<h1 id="colorlib-logo" class="mb-4"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Bay<span>Memories</span></a></h1>
-			
-				<p class="pfooter"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
+		<?php include 'baymemoriesfooter.php'?>
 		</aside> <!-- END COLORLIB-ASIDE -->
 		<div id="colorlib-main">
 			<section class="ftco-section ftco-no-pt ftco-no-pb">
@@ -308,87 +302,7 @@ session_start();
 			          </div>
 			        </div>
 			    	</div>
-	    			<div class="col-xl-4 sidebar ftco-animate bg-light pt-5">
-	            <div class="sidebar-box pt-md-4">
-	              <form action="#" class="search-form">
-	                <div class="form-group">
-	                  <span class="icon icon-search"></span>
-	                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
-	                </div>
-	              </form>
-	            </div>
-	            <div class="sidebar-box ftco-animate">
-	            	<h3 class="sidebar-heading">Categories</h3>
-	              <ul class="categories">
-				  <?php
-				 	$query = "select category,count(*) as count from blogs group by category";
-					$result = $conn->query($query);
-					if($result->num_rows>0)
-					{
-						while($row=$result->fetch_assoc())
-						{
-							echo '<li><a href="#">'.$row['category'].'<span>('.$row['count'].')</span></a></li>';	
-						}
-					} 
-				  ?>
-	                <li><a href="#">Fashion <span>(6)</span></a></li>
-	                <li><a href="#">Technology <span>(8)</span></a></li>
-	                <li><a href="#">Travel <span>(2)</span></a></li>
-	                <li><a href="#">Food <span>(2)</span></a></li>
-	                <li><a href="#">Photography <span>(7)</span></a></li>
-	              </ul>
-	            </div>
-
-	            <div class="sidebar-box ftco-animate">
-	              <h3 class="sidebar-heading">Popular Articles</h3>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> June 28, 2019</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> June 28, 2019</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> June 28, 2019</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-
-	            
-
-				
-
-	
-
-
-
-	          </div><!-- END COL -->
-	    		</div>
-	    	</div>
-	    </section>
-		</div><!-- END COLORLIB-MAIN -->
+	<?php include 'sidebar.php'?>
 	</div><!-- END COLORLIB-PAGE -->
 
   <!-- loader -->
@@ -411,6 +325,5 @@ session_start();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  
   </body>
 </html>

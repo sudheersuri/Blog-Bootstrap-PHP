@@ -47,14 +47,14 @@ function insertInTable($location)
 {
     global $conn;
     $date = date("Y/m/d");
-    $title = $_REQUEST["title"];
-    $sdesc = $_REQUEST["sdesc"];
-    $fdesc = $_REQUEST["fdesc"];
+    $title = $conn->real_escape_string($_REQUEST["title"]);
+    $sdesc = $conn->real_escape_string($_REQUEST["sdesc"]);
+    $fdesc = $conn->real_escape_string($_REQUEST["fdesc"]);
     $category = $_REQUEST["category"];
     $query = "insert into blogs(title,sdesc,fdesc,imglocation,category,dateadded) values('$title','$sdesc','$fdesc','$location','$category','$date')"; 
     $result = $conn->query($query);
     if($conn->affected_rows==1)
-        header("Location: index.html");
+        header("Location: index.php");
     else
         echo $conn->error;
 }
