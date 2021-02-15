@@ -1,3 +1,4 @@
 db.php
-loginmodule/db/db.php
-loginmodule/db/script.js
+loginmodule/php/db.php
+loginmodule/php/logout.php
+loginmodule/js/script.js
