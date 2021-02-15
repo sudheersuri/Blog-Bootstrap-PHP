@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +39,7 @@ session_start();
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
 			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
+				<ul id="navigationlinks">
 				<?php
 					if(isset($_SESSION["emailid"]))
 						{
@@ -46,7 +47,7 @@ session_start();
 								echo '<li><a href="admin.php">Admin</a></li>';
 						}
 				?>
-					<li class="colorlib-active"><a href="index.php">Hot</a></li>
+					<li class="colorlib-active"><a href="index.php">Hotter</a></li>
 					<li><a href="food.php">Food</a></li>
 					<li><a href="outdoor.php">Outdoor</a></li>
 					<li ><a href="about.html">About</a></li>
@@ -69,7 +70,7 @@ session_start();
 	    			<div class="col-xl-8 py-5 px-md-5">
 	    				<div class="row pt-md-4 blogs">
 							<?php
-							$conn=new mysqli("localhost","root","","test");
+							
 							$query = "select  * from blogs where category='hot'";
 							$result = $conn->query($query);
 							while($row=$result->fetch_assoc())
@@ -115,6 +116,7 @@ session_start();
 			          </div>
 			        </div>
 			    </div>
+				
 	<?php include 'sidebar.php'?>
 	</div><!-- END COLORLIB-PAGE -->
 
@@ -138,6 +140,7 @@ session_start();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/myscript.js"></script>
   
   </body>
 </html>

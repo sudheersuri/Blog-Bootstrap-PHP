@@ -1,5 +1,5 @@
 <?php
-$conn=new mysqli("localhost","root","","test");
+include '../db.php'; 
 $query = "select  * from blogs";
 $result = $result->query($query);
 $response = [];

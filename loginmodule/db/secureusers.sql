@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2021 at 12:51 PM
+-- Generation Time: Feb 14, 2021 at 03:40 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -31,15 +31,16 @@ CREATE TABLE `secureusers` (
   `id` int(11) NOT NULL,
   `username` varchar(25) NOT NULL,
   `emailid` varchar(50) NOT NULL,
-  `pass` varchar(255) NOT NULL
+  `pass` varchar(255) NOT NULL,
+  `joineddate` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `secureusers`
 --
 
-INSERT INTO `secureusers` (`id`, `username`, `emailid`, `pass`) VALUES
-(8, 'Sudheer Suri', 'sudheer@gotest.com', '$P$B8iDSUmUfevV3CkH1NeguTNEt1C8zV1');
+INSERT INTO `secureusers` (`id`, `username`, `emailid`, `pass`, `joineddate`) VALUES
+(8, 'Sudheer Suri', 'sudheer@gokasper.com', '$P$B8iDSUmUfevV3CkH1NeguTNEt1C8zV1', '');
 
 --
 -- Indexes for dumped tables

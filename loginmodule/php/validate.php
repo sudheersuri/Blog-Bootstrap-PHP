@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli('localhost','root','','test');
+include 'db.php'; 
 
 $userdetails = getUserDetails();
 

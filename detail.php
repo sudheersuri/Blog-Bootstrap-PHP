@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'db.php';
 if(!isset($_SESSION["username"]))
 {
     header("Location: loginmodule/html/login.html");
@@ -60,7 +61,7 @@ if(!isset($_SESSION["username"]))
 	    			<div class="col-lg-8 px-md-5 py-5">
 	    				<div class="row pt-md-4">
                             <?php
-							$conn=new mysqli("localhost","root","","test");
+						
                             $id = intval($_GET["id"]);
 							$query = "update blogs set viewcounter = viewcounter+1 where id=$id";
                         	$result = $conn->query($query);

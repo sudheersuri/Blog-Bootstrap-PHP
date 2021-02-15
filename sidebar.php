@@ -1,9 +1,9 @@
 <div class="col-xl-4 sidebar ftco-animate bg-light pt-5">
 	            <div class="sidebar-box pt-md-4">
-	              <form action="#" class="search-form">
+	              <form class="search-form" method="post" action="searchresults.php">
 	                <div class="form-group">
 	                  <span class="icon icon-search"></span>
-	                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+	                  <input type="text" name="searchtext" class="form-control" placeholder="Type a keyword and hit enter">
 	                </div>
 	              </form>
 	            </div>
@@ -21,11 +21,7 @@
 						}
 					} 
 				  ?>
-					<li><a href="#">Fashion <span>(6)</span></a></li>
-	                <li><a href="#">Technology <span>(8)</span></a></li>
-	                <li><a href="#">Travel <span>(2)</span></a></li>
-	                <li><a href="#">Food <span>(2)</span></a></li>
-	                <li><a href="#">Photography <span>(7)</span></a></li>
+				
 	              </ul>
 	            </div>
 

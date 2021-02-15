@@ -1,7 +1,7 @@
 <?php
 $ext="";
 $file="";
-$conn=new mysqli("localhost","root","","test");
+include 'db.php';
 if(isset($_REQUEST["submit"]))
 {
     

@@ -2,9 +2,10 @@
 require 'PHPMailerAutoload.php';
 require 'credential.php';
 include_once('class-phpass.php'); 
+include 'db.php'; 
 session_start();
 
-$conn = new mysqli('localhost','root','','test');
+
 
 if($_REQUEST["type"]=="sendmail")
 {   

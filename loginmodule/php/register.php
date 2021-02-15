@@ -1,7 +1,8 @@
 <?php
 date_default_timezone_set('UTC');
 include_once('class-phpass.php'); 
-$conn = new mysqli('localhost','root','','test');
+include 'db.php'; 
+
 
 $userexist = checkUserExists();
 
