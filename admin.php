@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION["emailid"]))
+{
+	 if(trim($_SESSION["emailid"])!="sudhirsuri43@gmail.com")
+			header("Location: loginmodule/html/login.html");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,7 +8,7 @@ $("document").ready(function(){
                 data=JSON.parse(data);
                             
                if(data.status==200)
-                    window.location.href="../../admin.php";
+                    window.location.href="../../index.php";
                else
                {
                 snippet = `<button class="btn btn-danger">${data.message}</button>`; 
