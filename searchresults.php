@@ -102,8 +102,8 @@ include 'db.php';
 								}
 								?>
 			    		</div><!-- END-->
-			    <div class="row">
-			          <div class="col">
+			      <div class="row">
+			          <!-- <div class="col">
 			            <div class="block-27">
 			              <ul>
 			                <li><a href="#">&lt;</a></li>
@@ -115,7 +115,7 @@ include 'db.php';
 			                <li><a href="#">&gt;</a></li>
 			              </ul>
 			            </div>
-			          </div>
+			          </div> -->
 			        </div>
 			    </div>
 	<?php include 'sidebar.php'?>

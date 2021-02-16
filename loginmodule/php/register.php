@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('UTC');
 include_once('class-phpass.php'); 
-include 'db.php'; 
+include '../../db.php'; 
 
 
 $userexist = checkUserExists();

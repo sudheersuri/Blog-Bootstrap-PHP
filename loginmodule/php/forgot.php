@@ -2,7 +2,7 @@
 require 'PHPMailerAutoload.php';
 require 'credential.php';
 include_once('class-phpass.php'); 
-include 'db.php'; 
+include '../../db.php';  
 session_start();
 
 

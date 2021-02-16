@@ -47,9 +47,10 @@ include 'db.php';
 								echo '<li ><a href="admin.php">Admin</a></li>';
 						}
 				?>
-					<li ><a href="index.php">Hot</a></li>
-					<li class="colorlib-active"><a href="food.php">Food</a></li>
-					<li><a href="outdoor.php">Outdoor</a></li>
+				
+					<li ><a href="index.php?page=1&category=hot">Hot</a></li>
+					<li class="colorlib-active"><a href="food.php?page=1&category=food">Food</a></li>
+					<li><a href="outdoor.php?page=1&category=outdoor">Outdoor</a></li>
 					<li ><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<?php
@@ -70,8 +71,7 @@ include 'db.php';
 	    			<div class="col-xl-8 py-5 px-md-5">
 	    				<div class="row pt-md-4 blogs">
 							<?php
-							$query = "select  * from blogs where category='food'";
-							$result = $conn->query($query);
+							include 'pagination.php';
 							while($row=$result->fetch_assoc())
 							{
 								?>
@@ -103,13 +103,18 @@ include 'db.php';
 			          <div class="col">
 			            <div class="block-27">
 			              <ul>
-			                <li><a href="#">&lt;</a></li>
-			                <li class="active"><span>1</span></li>
-			                <li><a href="#">2</a></li>
-			                <li><a href="#">3</a></li>
-			                <li><a href="#">4</a></li>
-			                <li><a href="#">5</a></li>
-			                <li><a href="#">&gt;</a></li>
+						  <?php
+						     // // display the links to the pages
+							 $page = 1;
+							 while($page<=$number_of_pages)
+							 {
+								 if($page==$currentpage)
+								echo "<li class='active'><a href='index.php?page=$page&category=food'>$page</a></li>";
+								else
+								echo "<li><a href='index.php?page=$page&category=food'>$page</a></li>";
+								$page++;
+							}
+							?>
 			              </ul>
 			            </div>
 			          </div>
