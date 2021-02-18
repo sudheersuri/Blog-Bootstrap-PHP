@@ -1,0 +1,12 @@
+{
+    "name": "sudhi/blog-bootstrap-php",
+    "authors": [
+        {
+            "name": "Sudheer",
+            "email": "sudhirsuri43@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    }
+}

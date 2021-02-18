@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'db.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,15 +44,15 @@ include 'db.php';
 				<?php
 					if(isset($_SESSION["emailid"]))
 						{
-						if(trim($_SESSION["emailid"])=="sudhirsuri43@gmail.com")
+							$emailid = $_ENV['emailid'];
+						if(trim($_SESSION["emailid"])==$emailid)
 								echo '<li><a href="admin.php">Admin</a></li>';
 						}
 				?>
 					<li class="colorlib-active"><a href="index.php?page=1&category=hot">Hot</a></li>
 					<li><a href="food.php?page=1&category=food">Food</a></li>
 					<li><a href="outdoor.php?page=1&category=outdoor">Outdoor</a></li>
-					<li ><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+				 
 					<?php
 					if(!isset($_SESSION["username"]))
 						echo '<li><a href="loginmodule/html/login.html">Login</a></li>';
@@ -106,7 +107,7 @@ include 'db.php';
 						  <?php
 						     // // display the links to the pages
 							 $page = 1;
-							 while($page<=$number_of_pages)
+							 while($page<$number_of_pages)
 							 {
 								 if($page==$currentpage)
 								echo "<li class='active'><a href='index.php?page=$page&category=hot'>$page</a></li>";

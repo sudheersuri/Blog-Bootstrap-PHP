@@ -51,8 +51,7 @@ include 'db.php';
 					<li ><a href="index.php">Hot</a></li>
 					<li><a href="food.php">Food</a></li>
 					<li><a href="outdoor.php">Outdoor</a></li>
-					<li ><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+				 
 					<?php
 					if(!isset($_SESSION["username"]))
 						echo '<li><a href="loginmodule/html/login.html">Login</a></li>';

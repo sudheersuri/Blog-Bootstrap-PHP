@@ -27,13 +27,4 @@ $this_page_first_result = ($page-1)*$results_per_page;
 $query="SELECT * FROM blogs where category='$category' LIMIT  $this_page_first_result,$results_per_page";
 $result = $conn->query($query);
 
-// while($row = $result->fetch_assoc()) {
-//   echo $row['id'] . ' ' . $row['blogs']. '<br>';
-// }
-
-// // display the links to the pages
-// for ($page=1;$page<=$number_of_pages;$page++) {
-//   echo '<a href="index.php?page=' . $page . '">' . $page . '</a> ';
-// }
-
 ?>

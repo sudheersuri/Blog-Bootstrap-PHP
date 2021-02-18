@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'db.php';
+echo getenv("email");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@ include 'db.php';
      <title>Bay Memories</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
@@ -27,14 +28,11 @@ include 'db.php';
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
   </head>
   <body>
-
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
@@ -47,12 +45,10 @@ include 'db.php';
 								echo '<li ><a href="admin.php">Admin</a></li>';
 						}
 				?>
-				
 					<li ><a href="index.php?page=1&category=hot">Hot</a></li>
 					<li class="colorlib-active"><a href="food.php?page=1&category=food">Food</a></li>
 					<li><a href="outdoor.php?page=1&category=outdoor">Outdoor</a></li>
-					<li ><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+				 
 					<?php
 					if(!isset($_SESSION["username"]))
 						echo '<li><a href="loginmodule/html/login.html">Login</a></li>';
@@ -61,7 +57,6 @@ include 'db.php';
 					?>
 				</ul>
 			</nav>
-
 		<?php include 'baymemoriesfooter.php'?>
 		</aside> <!-- END COLORLIB-ASIDE -->
 		<div id="colorlib-main">
@@ -109,9 +104,9 @@ include 'db.php';
 							 while($page<=$number_of_pages)
 							 {
 								 if($page==$currentpage)
-								echo "<li class='active'><a href='index.php?page=$page&category=food'>$page</a></li>";
+								echo "<li class='active'><a href='food.php?page=$page&category=food'>$page</a></li>";
 								else
-								echo "<li><a href='index.php?page=$page&category=food'>$page</a></li>";
+								echo "<li><a href='food.php?page=$page&category=food'>$page</a></li>";
 								$page++;
 							}
 							?>
