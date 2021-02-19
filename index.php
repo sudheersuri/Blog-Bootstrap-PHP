@@ -40,7 +40,26 @@ include 'db.php';
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
 			<nav id="colorlib-main-menu" role="navigation">
-				
+				<ul id="navigationlinks">
+				<?php
+					if(isset($_SESSION["emailid"]))
+						{
+							$emailid = $_ENV['emailid'];
+						if(trim($_SESSION["emailid"])==$emailid)
+								echo '<li><a href="admin.php">Admin</a></li>';
+						}
+				?>
+					<li class="colorlib-active"><a href="index.php?page=1&category=hot">Hot</a></li>
+					<li><a href="food.php?page=1&category=food">Food</a></li>
+					<li><a href="outdoor.php?page=1&category=outdoor">Outdoor</a></li>
+				 
+					<?php
+					if(!isset($_SESSION["username"]))
+						echo '<li><a href="loginmodule/html/login.html">Login</a></li>';
+					else
+						echo '<li><a href="loginmodule/php/logout.php">Logout</a></li>';
+					?>
+				</ul>
 			</nav>
 
 			<?php include 'baymemoriesfooter.php'?>
